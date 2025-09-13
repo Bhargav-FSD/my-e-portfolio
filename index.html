@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My E-Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+  <header>
+    <h1>My E-Portfolio</h1>
+    <nav>
+      <button onclick="showSection('about')">Personal Info</button>
+      <button onclick="showSection('education')">Education</button>
+      <button onclick="showSection('skills')">Skills</button>
+      <button onclick="showSection('reflection')">Reflections</button>
+      <button onclick="showSection('samples')">Samples</button>
+      <button onclick="showSection('extra')">Extra-curricular</button>
+      <button onclick="showSection('resume')">Resume</button>
+      <button onclick="showSection('contact')">Contact</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about" class="active">
+      <h2>Personal Information</h2>
+      <img src="Profile.PNG" alt="Profile-Photo" class="profile-pic">
+      <ul>
+        <li><strong>Name:</strong> Bhargav M</li>
+        <li><strong>Profile:</strong> Student | Tech Enthusiast | Aspiring Data Science Engineer | Full Stack Developer</li>
+        <li><strong>Location:</strong> Bangalore, Karnataka, India</li>
+        <li><strong>Email:</strong> <a href="mailto:bhargav.m23@iiits.in">bhargav.m23@iiits.in</a></li>
+      </ul>
+      <p>
+        I am a passionate learner with a strong interest in <b>software development, data science, and problem-solving</b>.
+        I enjoy exploring new technologies, building creative projects, and applying my knowledge to real-world challenges.
+        My goal is to continuously grow technically and personally while contributing to impactful projects.
+      </p>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <ol>
+        <li>B.Tech in Computer Science – IIIT Sricity (2023 - 2027)</li>
+        <li>Intermediate – BGS PU College (2020 - 2022)</li>
+      </ol>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>Python</li>
+        <li>C and C++</li>
+        <li>SQL</li>
+        <li>Machine Learning</li>
+        <li>Web Development</li>
+        <li>DSA (Data Structures and Algorithms)</li>
+        <li>Power BI</li>
+      </ul>
+    </section>
+
+    <section id="reflection">
+      <h2>Reflections / Personal Statement</h2>
+      <p>
+        I strongly believe that learning is a lifelong journey, and I am passionate about exploring how technology can solve real-world problems.
+        My interest in <b>software development and data science</b> comes from my curiosity to analyze data, build innovative solutions, and make informed decisions that have a meaningful impact.
+      </p>
+      <p>
+        I enjoy working on projects that challenge me to think critically, whether it's developing a full-stack application, designing efficient algorithms, or applying machine learning techniques.
+        Collaboration excites me because sharing ideas and learning from others makes me grow faster as a developer.
+      </p>
+      <p>
+        My goal is to become a <b>skilled Data Science Engineer and Full-Stack Developer</b>, contributing to projects that improve people's lives.
+        I aspire to work on problems involving AI, automation, and data-driven decision-making while continuing to learn and adapt to new technologies.
+      </p>
+    </section>
+
+    <section id="samples">
+      <h2>Samples of Work</h2>
+      <div class="project-samples">
+        <div class="project-card">
+          <h3>Cross-Modal Perception Drone</h3>
+          <p>Drone navigation in low-visibility environments using camera and sensor fusion (ultrasonic + infrared).</p>
+          <a href="https://github.com/Bhargav-FSD/cross-modal-drone" target="_blank" class="btn">View Code on GitHub</a>
+          <img src="C:\Users\Bhargav M\Web\SE\cross-modal-drone\cross-modal-drone.png" alt="Obstacle Detection" class="project-image">
+        </div>
+
+        <div class="project-card">
+          <h3>Power BI Projects on Real-World Data</h3>
+          <p>Analyzed datasets using Power BI to create interactive dashboards and visualizations for insights extraction.</p>
+          <a href="https://github.com/Bhargav-FSD/cross-modal-drone" target="_blank" class="btn">View Projects on GitHub</a>
+          <img src="C:\Users\Bhargav M\Web\SE\power-bi-projects\images\power-bi-projects.png" alt="Power BI Dashboard" class="project-image">
+        </div>
+
+        <div class="project-card">
+          <h3>MNIST CNN + AlexNet Comparison</h3>
+          <p>Compared a simple CNN architecture with AlexNet on a reduced CIFAR-10 dataset, analyzing performance and accuracy.</p>
+          <a href="reports/MNIST_CNN_vs_AlexNet.pdf" target="_blank" class="btn">Read Report</a>
+          <img src="C:\Users\Bhargav M\Web\SE\mnist_alexnet_comparison\images\mnist_alexnet_comparison.png" alt="MNIST vs AlexNet" class="project-image">
+        </div>
+      </div>
+    </section>
+
+    <section id="extra">
+      <h2>Extracurricular & Volunteering</h2>
+      <ul>
+        <li>Practice of coding – FreeCodeCamp projects and challenges</li>
+        <li>Volunteer – Photography Club, organizing events and workshops</li>
+        <li>Volunteer – Meraki Club, organizing events</li>
+        <li>Playing Chess and Carrom</li>
+      </ul>
+    </section>
+
+    <section id="resume">
+      <h2>Resume</h2>
+      <p><a href="resume.pdf" target="_blank" class="btn">View My Resume</a></p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p><i class="fas fa-envelope"></i>Email: <a href="mailto:bhargav.m23@iiits.in">bhargav.m23@iiits.in</a></p>
+      <p><i class="fab fa-linkedin"></i>LinkedIn: <a href="https://www.linkedin.com" target="_blank">Connect with me</a></p>
+      <p><i class="fas fa-phone"></i>Phone: +91-7795036940</p>
+    </section>
+  </main>
+
+  <script>
+    function showSection(sectionId) {
+      document.querySelectorAll('section').forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(sectionId).classList.add('active');
+    }
+  </script>
+</body>
+</html>
